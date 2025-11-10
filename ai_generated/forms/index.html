@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Business & Financial Registration</title>
+</head>
+<body>
+
+<form>
+    <h2>Complete Business & Financial Registration</h2>
+
+    <fieldset>
+        <legend>Personal Details</legend>
+        <label>Full Name</label>
+        <input type="text" name="fullname" placeholder="Enter your full name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="example@email.com" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter a strong password" required>
+
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="+1234567890" required>
+
+        <label>Upload Profile Photo</label>
+        <input type="file" name="photo" accept="image/*">
+
+        <label>Favorite Color</label>
+        <input type="color" name="favcolor" value="#00d4ff">
+    </fieldset>
+
+    <!-- Business Info -->
+    <fieldset>
+        <legend>Business Details</legend>
+        <label>Business Name</label>
+        <input type="text" name="business" placeholder="Enter business name">
+
+        <label>Business Type</label>
+        <select name="businesstype">
+            <option value="">Select type</option>
+            <option>Finance</option>
+            <option>Retail</option>
+            <option>Tech</option>
+            <option>Consulting</option>
+            <option>Other</option>
+        </select>
+
+        <label>Year Established</label>
+        <input type="number" name="year" min="1900" max="2025" step="1">
+
+        <label>Business Website</label>
+        <input type="url" name="website" placeholder="https://example.com">
+
+        <label>Business Description</label>
+        <textarea name="description" rows="4" placeholder="Describe your business"></textarea>
+    </fieldset>
+
+    <!-- Financial Info -->
+    <fieldset>
+        <legend>Financial Details</legend>
+        <label>Tax ID</label>
+        <input type="text" name="taxid" placeholder="Enter tax ID">
+
+        <label>Account Number</label>
+        <input type="text" name="accountnumber" placeholder="Account number">
+
+        <label>Bank Name</label>
+        <input type="text" name="bankname" placeholder="Bank name">
+
+        <label>Monthly Revenue (USD)</label>
+        <input type="range" name="revenue" min="0" max="100000" value="20000" step="1000" oninput="output.value=this.value">
+        <output name="output">20000</output>
+    </fieldset>
+
+    <!-- Preferences -->
+    <fieldset>
+        <legend>Preferences & Agreements</legend>
+
+        <label>Preferred Contact Method</label>
+        <div class="radio-group">
+            <label><input type="radio" name="contact" value="email"> Email</label>
+            <label><input type="radio" name="contact" value="phone"> Phone</label>
+            <label><input type="radio" name="contact" value="sms"> SMS</label>
+        </div>
+
+        <label>Services Interested In</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="service" value="investment"> Investment</label>
+            <label><input type="checkbox" name="service" value="loan"> Business Loan</label>
+            <label><input type="checkbox" name="service" value="insurance"> Insurance</label>
+            <label><input type="checkbox" name="service" value="consulting"> Consulting</label>
+        </div>
+
+        <label for="country">Select Country</label>
+        <input list="countries" name="country" placeholder="Type or choose...">
+        <datalist id="countries">
+            <option value="Kenya">
+            <option value="USA">
+            <option value="UK">
+            <option value="Canada">
+            <option value="UAE">
+        </datalist>
+
+        <label><input type="checkbox" required> I agree to the <a href="#" style="color:#00d4ff;">Terms & Conditions</a></label>
+    </fieldset>
+
+    <button type="submit">Register Now</button>
+</form>
+
+</body>
+</html>
+ 
